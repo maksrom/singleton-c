@@ -10,7 +10,7 @@ private:
 	}
 public:
 	static Singleton* getInstance();
-	void method();
+	void someMethod();
 	~Singleton()
 	{
 		flag = false;
@@ -38,18 +38,18 @@ Singleton* Singleton::getInstance() {
 	}
 }
 
-void Singleton::method() {
+void Singleton::someMethod() {
 	cout << "Method of the singleton class" << endl;
 }
 
 void main() {
 	Singleton *sc1, *sc2, *sc23;
 	sc1 = Singleton::getInstance();
-	sc1->method();
+	sc1->someMethod();
 	sc2 = Singleton::getInstance();
-	sc2->method();
+	sc2->someMethod();
 	sc23 = Singleton::getInstance();
-	sc23->method();
+	sc23->someMethod();
 
 
 	system("PAUSE");
